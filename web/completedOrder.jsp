@@ -15,9 +15,14 @@
     </head>
     <body>
         <h1>Your order has been confirmed!</h1>
-        <p> Thank you <%out.println(request.getAttribute("name"));%>.  Your order of 
-            <%out.println(request.getAttribute("items"));
-    
+        <p> Thank you <%out.println(request.getAttribute("name"));%>.<br />  Your order of:<br />
+            <%
+            String[] items = (String[])request.getAttribute("items");
+            for(String item:items){
+                out.println(item + "<br />");
+            }
+
+            
             //String items = request.getAttribute("items");
             //StringTokenizer st = new StringTokenizer(request.getAttribute("items")), ",");
             //while (st.hasMoreElements()) {

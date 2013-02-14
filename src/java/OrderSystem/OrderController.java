@@ -59,7 +59,7 @@ public class OrderController extends HttpServlet {
 
         
         //set attributes
-        request.setAttribute("items", Arrays.toString(items));
+        request.setAttribute("items", items);
         request.setAttribute("name", customerName);
         request.setAttribute("subTotal", subTotal);
         request.setAttribute("tax", tax);
